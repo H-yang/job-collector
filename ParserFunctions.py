@@ -173,3 +173,22 @@ def buildDataRows(results):
             str(r.notPrefer).encode('utf8'), str(r.skillSets).encode('utf8'), r.enterDate.encode('utf8'), r.url.encode('utf8')]
         rows.append(row)
     return rows
+
+def buildDataDict(result):
+    mydict = {  "companyName": result.companyName, \
+                "jobTitle": result.jobTitle, \
+                "isHeadHunter": result.isHeadHunter, \
+                "location": result.location,\
+                "postedOn": result.postedOn,\
+                "isOnNOH1BList" : result.isOnNOH1BList,\
+                "visaKeywords" : str(result.visaKeywords),\
+                "applied" : result.applied,\
+                "isAd": result.isAd,\
+                "experience" : result.experience,\
+                "jobType" : result.jobType,\
+                "notPrefer" : str(result.notPrefer),\
+                "skillSets" : str(result.skillSets),\
+                "enterDate" : result.enterDate,\
+                "url" : result.url
+    }
+    return mydict
